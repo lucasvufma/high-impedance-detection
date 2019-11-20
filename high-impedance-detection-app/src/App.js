@@ -7,14 +7,23 @@ import { useState, useEffect } from 'react'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { CssBaseline, CircularProgress } from '@material-ui/core'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import firebase from './components/firebase'
 
 
 
 
 
-function App(){
+export default function App(){
+  const[firebaseInitialized,setfirebaseInitialized]=useState(false)
+
+  React.useEffect(() => {
+		firebase.isInitialized().then(val => {
+			setfirebaseInitialized(val)
+		})
+	})
+
   
-  return (
+  return firebaseInitialized !== false ? (
    
 			<Router>
 				<Switch>
@@ -22,7 +31,6 @@ function App(){
           <Route exact path="/home" component={Home} />      
 				</Switch>
 			</Router>
-  );
+  ) : <div id="loader"><CircularProgress /></div>
   }
 
-  export default App;

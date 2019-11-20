@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'
 import './login.css'
 import { Typography, Paper, Avatar, Button, FormControl, Input, InputLabel } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import withStyles from '@material-ui/core/styles/withStyles'
 import { Link, withRouter } from 'react-router-dom'
+import firebase from '../firebase'
 
 
 
@@ -76,6 +77,7 @@ function LoginPage(props){
     )
     async function login(){
         try{
+            await firebase.login(email, password);
             props.history.replace('/home');
 
         }catch(error){

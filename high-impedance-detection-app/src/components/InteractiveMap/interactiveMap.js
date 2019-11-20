@@ -10,6 +10,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 
 
+
+
 const useStyles = makeStyles(theme => ({
   root: {
     height: 180,
@@ -217,8 +219,6 @@ export default function InteractiveMap() {
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
