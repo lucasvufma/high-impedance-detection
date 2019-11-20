@@ -1,11 +1,13 @@
+
+
 #mapaUfma{
-    margin: 20px 120px;
+    margin: 10px 120px;
     float: right;
     
       
   }
 .wraper{
-  margin: 10px auto;
+  margin: 0 auto;
   background-color: black;
   height: 550px;
   width: 1080px;
@@ -75,7 +77,7 @@
     height: 100%;
     width: 100%;
     position: relative;
-    background-image: url('../assets/rsz_mapaufma.jpg');
+    background-image: url('../../assets/rsz_mapaufma.jpg');
     background-repeat: no-repeat;
 }
 
@@ -97,11 +99,11 @@
 }
 
 .appContainer{
-  width: 82%;
-  height: 560px;
+  width: 80%;
+  height: 545px;
   margin: 20px auto;
   padding: 20px;
-  border-radius:20px;
+  border-radius:25px;
   background-color:#fff;
   box-shadow:0 5px 15px -5px rgba(0,0,0,.44)
 
