@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Popover from '@material-ui/core/Popover';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Switch from '@material-ui/core/Switch';
+import Paper from '@material-ui/core/Paper';
+import Slide from '@material-ui/core/Slide';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import InteractiveMap from './components/interactiveMap'
 
-function App() {
+
+
+
+
+
+function App(){
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div > 
+    <InteractiveMap />
+  </div>
   );
-}
+  }
 
-export default App;
+  export default App;

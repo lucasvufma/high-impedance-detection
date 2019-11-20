@@ -341,3 +341,13 @@ overflow:hidden;
   box-shadow: 3px 3px 0px transparent;
   transition: 0.5s;
   }
+
+
+  .wrap{
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  .row{
+    height: 50px;
+  }

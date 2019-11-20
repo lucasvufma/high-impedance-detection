@@ -1,0 +1,108 @@
+#mapaUfma{
+    margin: 20px 120px;
+    float: right;
+    
+      
+  }
+.wraper{
+  margin: 10px auto;
+  background-color: black;
+  height: 550px;
+  width: 1080px;
+  border: 100px;
+  border-radius:30px;
+  box-shadow:0 5px 15px -5px rgba(0,0,0,.44);
+}
+.build1{
+  display: inline-block;
+  width: 60px;
+  height: 80px;
+  bottom: 20px;
+  right: 200px;
+  top: 60px;
+  position: absolute;
+}
+.build2{
+    display: inline-block;
+    width: 60px;
+    height: 80px;
+    bottom: 20px;
+    right: 120px;
+    top: 240px;
+    position: absolute;
+  
+}
+.build3{
+  display: inline-block;
+  width: 60px;
+  height: 80px;
+  bottom: 20px;
+  right: 260px;
+  top: 350px;
+  position: absolute;
+
+}
+.build4{
+  display: inline-block;
+  width: 60px;
+  height: 80px;
+  bottom: 20px;
+  right: 450px;
+  top: 120px;
+  position: absolute;
+
+}
+
+.build5{
+  display: inline-block;
+  width: 60px;
+  height: 80px;
+  bottom: 20px;
+  right: 510px;
+  position: absolute;
+
+}
+
+
+.on{
+  color: green;
+}
+.off{
+  color: red;
+}
+.table{
+    float: left;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: url('../assets/rsz_mapaufma.jpg');
+    background-repeat: no-repeat;
+}
+
+#row1{
+    display: inline-block;
+    height: 80px;
+    width: 100%;
+  
+}
+  #cell{
+    height: 80px;
+    width: 70px;
+    display: inline-block;
+    margin: 2px 40px;
+}
+
+#tohide{
+ opacity: 0;
+}
+
+.appContainer{
+  width: 82%;
+  height: 560px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius:20px;
+  background-color:#fff;
+  box-shadow:0 5px 15px -5px rgba(0,0,0,.44)
+
+}
