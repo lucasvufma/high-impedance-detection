@@ -46,22 +46,26 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function InteractiveMap() {
-  const classes = useStyles();
-  const [fases, setFases] = React.useState([
-    { Fase1: 'ON', Fase2:'ON',Fase3: 'ON' },
-    { Fase1: 'ON', Fase2:'ON',Fase3: 'ON' },
-    { Fase1: 'ON', Fase2:'OFF',Fase3: 'ON' },
-    { Fase1: 'OFF', Fase2:'OFF',Fase3: 'ON' },
-    { Fase1: 'OFF', Fase2:'OFF',Fase3: 'ON' }
-  ]);
 
+export default function InteractiveMap(props) {
+
+
+
+  
+    
+  const classes = useStyles();
+  const [fases, setFases] = React.useState(props.objectFases);
+ 
 //Essa lógica precisa ser refatorada, tou repetindo código!
     const [checked, setChecked] = React.useState(false);
     const [checked1, setChecked1] = React.useState(false);
     const [checked2, setChecked2] = React.useState(false);
     const [checked3, setChecked3] = React.useState(false);
     const [checked4, setChecked4] = React.useState(false);
+
+    React.useEffect(()=>{
+      setFases(props.objectFases)
+    console.log('changing')}, [props.objectFases]);
 
   //Paulo Freire
     const handleChange = () => {
@@ -86,11 +90,8 @@ export default function InteractiveMap() {
 
 
 
-
-
-  
-  
   return (
+
   <div class="appContainer"> 
     <div class="wraper">
       <div class="table">
@@ -107,7 +108,7 @@ export default function InteractiveMap() {
                 label="Show"
               />
               <Slide direction="up" in={checked2} mountOnEnter unmountOnExit>
-                <Paper elevation={4} className={classes.paper}>
+                <Paper elevation={4} className={classes.paper} >
                   <h3>Predio BICT/ENG</h3>
                   <p>
                   {Object.keys(fases[2])[0]+': '}<span className={fases[2].Fase1=='ON' ? "on" : "off"}>{fases[2].Fase1}</span></p>
@@ -115,6 +116,7 @@ export default function InteractiveMap() {
                   <p>{Object.keys(fases[2])[2]+': '}<span className={fases[2].Fase3=='ON' ? "on" : "off"}>{fases[2].Fase3}</span></p>
                 </Paper>
               </Slide>
+              
             
             </div>
           </div>

@@ -12,6 +12,7 @@ import {Link} from 'react-router-dom'
 import TouchAppIcon from '@material-ui/icons/TouchApp';
 import { withRouter } from 'react-router-dom'
 import withStyles from '@material-ui/core/styles/withStyles'
+import InteractiveMap from '../InteractiveMap/interactiveMap'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,10 +29,12 @@ const useStyles = makeStyles(theme => ({
 
 function DenseAppBar(props) {
   const classes = useStyles();
+
   const simulate = () =>{
+      props.DispatchSimulation();
 
   }
-  
+
  const logout= () => {
     console.log("hello")
     firebase.auth().signOut().then(function(){
