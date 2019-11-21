@@ -7,6 +7,7 @@ import Switch from '@material-ui/core/Switch';
 import Paper from '@material-ui/core/Paper';
 import Slide from '@material-ui/core/Slide';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import request from '../nodeRequest';
 
 
 
@@ -65,6 +66,7 @@ export default function InteractiveMap(props) {
 
     React.useEffect(()=>{
       setFases(props.objectFases)
+      request(props.objectFases)
     console.log('changing')}, [props.objectFases]);
 
   //Paulo Freire
